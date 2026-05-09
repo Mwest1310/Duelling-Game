@@ -1,0 +1,15 @@
+E:\projects\CsharpProjects\Duelling Game\bin\Debug\net10.0\Duelling Game.exe
+E:\projects\CsharpProjects\Duelling Game\bin\Debug\net10.0\Duelling Game.deps.json
+E:\projects\CsharpProjects\Duelling Game\bin\Debug\net10.0\Duelling Game.runtimeconfig.json
+E:\projects\CsharpProjects\Duelling Game\bin\Debug\net10.0\Duelling Game.dll
+E:\projects\CsharpProjects\Duelling Game\bin\Debug\net10.0\Duelling Game.pdb
+E:\projects\CsharpProjects\Duelling Game\obj\Debug\net10.0\Duelling Game.GeneratedMSBuildEditorConfig.editorconfig
+E:\projects\CsharpProjects\Duelling Game\obj\Debug\net10.0\Duelling Game.AssemblyInfoInputs.cache
+E:\projects\CsharpProjects\Duelling Game\obj\Debug\net10.0\Duelling Game.AssemblyInfo.cs
+E:\projects\CsharpProjects\Duelling Game\obj\Debug\net10.0\Duelling Game.csproj.CoreCompileInputs.cache
+E:\projects\CsharpProjects\Duelling Game\obj\Debug\net10.0\Duelling Game.sourcelink.json
+E:\projects\CsharpProjects\Duelling Game\obj\Debug\net10.0\Duelling Game.dll
+E:\projects\CsharpProjects\Duelling Game\obj\Debug\net10.0\refint\Duelling Game.dll
+E:\projects\CsharpProjects\Duelling Game\obj\Debug\net10.0\Duelling Game.pdb
+E:\projects\CsharpProjects\Duelling Game\obj\Debug\net10.0\Duelling Game.genruntimeconfig.cache
+E:\projects\CsharpProjects\Duelling Game\obj\Debug\net10.0\ref\Duelling Game.dll
