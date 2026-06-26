@@ -6,6 +6,5 @@ The fight itself is turned-based. When attacking, damage is dealt based on a ran
 When defending, you may choose to either dodge or block. Success is dependent on a random number.
 It is currently a fight to the death. I hope to add more interesting choices and a more dynamic system later.
 
-The console display needs to be updated to be easier to read and a little more visually appealing.
 The dodge and block systems are identical. Currently, they do the exact same thing. I plan to expand the system at a later date, making the choices more engaging.
 There is only one attack choice. I may create new distinct ways of attacking later.
