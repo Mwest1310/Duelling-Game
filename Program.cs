@@ -17,7 +17,6 @@ beginDefence = StartFight(delayCounter);
 int playerHealth = 10;
 int opponentHealth = 10;
 
-
 // Combat begins
 do
 {
@@ -85,18 +84,27 @@ bool StartFight(int delayCounter)
 // Method to prompt the player to decide how to defend themselves. For now, only two options: block or dodge, which have the same underlying logic.
 bool PlayerDefence()
 {
+    Console.WriteLine();
     Console.WriteLine("Your opponent launches a strike against you. How do you respond?");
+    Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine("1:\tBlock\n2:\tDodge");
     string? readResult = Console.ReadLine();
+    Console.ForegroundColor = ConsoleColor.White;
 
     switch (readResult)
     {
         case "1":
+            Console.WriteLine();
+            Console.WriteLine("You attempt to block your opponent's attack.");
+            Console.WriteLine();
             int blockSuccess = rand.Next(0, 2);
             if (blockSuccess < 1)
             {
+                Console.BackgroundColor = ConsoleColor.Red;
                 int damageTaken = rand.Next(1, 4);
-                Console.WriteLine($"You failed to block your opponent's attack. You take {damageTaken} damage.");
+                Console.Write($"You failed to block your opponent's attack. You take {damageTaken} damage.");
+                Console.ResetColor();
+                Console.WriteLine();
                 playerHealth -= damageTaken;
                 Console.WriteLine($"You now have {playerHealth} health.");
             }
@@ -109,12 +117,18 @@ bool PlayerDefence()
             break;
 
         case "2":
+            Console.WriteLine();
+            Console.WriteLine("You attempt to dodge your opponent's attack.");
+            Console.WriteLine();
             int dodgeSuccess = rand.Next(0, 2);
 
             if (dodgeSuccess < 1)
             {
+                Console.BackgroundColor = ConsoleColor.Red;
                 int damageTaken = rand.Next(1, 4);
-                Console.WriteLine($"You failed to dodge your opponent's attack. You take {damageTaken} damage");
+                Console.Write($"You failed to dodge your opponent's attack. You take {damageTaken} damage");
+                Console.WriteLine();
+                Console.ResetColor();
                 playerHealth -= damageTaken;
                 Console.WriteLine($"You now have {playerHealth} health.");
             }
@@ -132,9 +146,12 @@ bool PlayerDefence()
 // Method to prompt the player to launch an attack. Only one attack type for now. The opponent's defensive action is decided by the code, and the logic for blocking and dodging is the same for now.
 bool PlayerAttack()
 {
+    Console.WriteLine();
     Console.WriteLine("You prepare to launch your attack.");
+    Console.ForegroundColor = ConsoleColor.Blue;
     Console.WriteLine("1: Attack");
     string? readResult = Console.ReadLine();
+    Console.ForegroundColor = ConsoleColor.White;
     switch (readResult)
     {
         case "1":
@@ -143,13 +160,19 @@ bool PlayerAttack()
             switch (opponentAction)
             {
                 case 0:
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("Your opponent moves to block your attack.");
+                    Console.WriteLine();
                     int blockSuccess = rand.Next(0, 2);
-
+                    Console.ForegroundColor = ConsoleColor.White;
                     if (blockSuccess < 1)
                     {
                         int damageTaken = rand.Next(1, 4);
-                        Console.WriteLine($"Your opponent fails to block your attack. He takes {damageTaken} damage.");
+                        Console.BackgroundColor = ConsoleColor.Blue;
+                        Console.Write($"Your opponent fails to block your attack. He takes {damageTaken} damage.");
+                        Console.ResetColor();
+                        Console.WriteLine();
                         opponentHealth -= damageTaken;
                         Console.WriteLine($"Your opponent now has {opponentHealth} health.");
                     }
@@ -162,13 +185,19 @@ bool PlayerAttack()
                     break;
 
                 case 1:
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("Your opponent attempts to dodge your attack.");
+                    Console.WriteLine();
                     int dodgeSuccess = rand.Next(0, 2);
-
+                    Console.ForegroundColor = ConsoleColor.White;
                     if (dodgeSuccess < 1)
                     {
                         int damageTaken = rand.Next(1, 4);
-                        Console.WriteLine($"Your opponent failed to dodge  your attack. He takes {damageTaken} damage");
+                        Console.BackgroundColor = ConsoleColor.Blue;
+                        Console.Write($"Your opponent failed to dodge your attack. He takes {damageTaken} damage");
+                        Console.ResetColor();
+                        Console.WriteLine();
                         opponentHealth -= damageTaken;
                         Console.WriteLine($"He now has {opponentHealth} health.");
                     }
